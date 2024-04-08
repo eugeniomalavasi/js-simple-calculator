@@ -5,7 +5,7 @@ let operatorSelector = document.querySelectorAll(".symbols .shadow")
 // numero nello schermo nero
 let screenNumb = document.querySelector(".screen_text");
 // selezione bottne =
-let equaleBtn = document.querySelector(".orange")
+const equalBtn = document.querySelector(".orange");
 
 // ciclo for per assegnare event listener ad ogni bottone
 for (let i = 0; i < numberSelector.length; i++) {
@@ -27,7 +27,7 @@ function btnClick() {
     const inputNumb = this.innerHTML;
     const blackScreenResult = `${screenNumb.innerHTML}${inputNumb}`;
     screenNumb.innerHTML = blackScreenResult;
-    console.log(screenNumb.innerHTML, "sono input numero");
+    console.log(screenNumb.innerHTML);
     return screenNumb;
 }
 
@@ -37,11 +37,20 @@ function btnClick() {
  */
 function operatorClick() {
     const operator = this.innerHTML;
-    console.log(operator.innerHTML);
     const firstDataSave = `${screenNumb.innerHTML} ${operator}`;
     console.log(firstDataSave);
     screenNumb.innerHTML = "";
     return firstDataSave;
 }
 
+const firstNumbAndOperator = operatorClick();
+console.log(firstNumbAndOperator);
+// event listener per bottone uguale
+equalBtn.addEventListener ("click", equalClick);
 
+function equalClick() {
+    equalOperator = this.innerHTML;
+    console.log(equalOperator);
+    const secondDataSave = `${firstNumbAndOperator}` 
+    console.log(secondDataSave);
+}
