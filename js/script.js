@@ -4,6 +4,8 @@ let numberSelector = document.querySelectorAll(".numbers .shadow");
 let operatorSelector = document.querySelectorAll(".symbols .shadow")
 // numero nello schermo nero
 let screenNumb = document.querySelector(".screen_text");
+// selezione bottne =
+let equaleBtn = document.querySelector(".orange")
 
 // ciclo for per assegnare event listener ad ogni bottone
 for (let i = 0; i < numberSelector.length; i++) {
@@ -29,14 +31,17 @@ function btnClick() {
     return screenNumb;
 }
 
+/**
+ * salva il primo numero inserito e l'operatore aritmetrico all'interno di una variabile e cancello lo schermo
+ * @returns {string}
+ */
 function operatorClick() {
     const operator = this.innerHTML;
     console.log(operator.innerHTML);
-    const dataSave = `${screenNumb.innerHTML} ${operator}`;
-    console.log(dataSave);
+    const firstDataSave = `${screenNumb.innerHTML} ${operator}`;
+    console.log(firstDataSave);
     screenNumb.innerHTML = "";
-    return dataSave;
-
+    return firstDataSave;
 }
 
 
