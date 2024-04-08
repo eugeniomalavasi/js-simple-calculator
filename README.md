@@ -14,7 +14,7 @@ aggiungere event listener a tutti gli operatori
 
 quando si clicca su un operatore, salvare l'operatore cliccato e il primo operando, quindi resettare il numero in alto
     - al click (eventlistener) su un operatore:
-        - 
+        - salvare primo numero e salvare operatore in una variabile
 MILESTONE 3
 aggiungere event listener al pulsante =
 quando si clicca su =, salvare il secondo operando, effetuare il calcolo corretto in base all'operatore selezionato e visualizzare il risultato in alto

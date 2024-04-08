@@ -3,7 +3,7 @@ let numberSelector = document.querySelectorAll(".numbers .shadow");
 // selezione bottoni operatore
 let operatorSelector = document.querySelectorAll(".symbols .shadow")
 // numero nello schermo nero
-const screenNumb = document.querySelector(".screen_text");
+let screenNumb = document.querySelector(".screen_text");
 
 // ciclo for per assegnare event listener ad ogni bottone
 for (let i = 0; i < numberSelector.length; i++) {
@@ -14,7 +14,7 @@ for (let i = 0; i < numberSelector.length; i++) {
 // ciclo for per assegnare event listener a bottoni operatori
 for (let j = 0; j < operatorSelector.length; j++) {
     singleOperator = operatorSelector[j];
-    singleOperator.addEventListener("click", btnClick)
+    singleOperator.addEventListener("click", operatorClick)
 }
 
 /**
@@ -23,10 +23,20 @@ for (let j = 0; j < operatorSelector.length; j++) {
  */
 function btnClick() {
     const inputNumb = this.innerHTML;
-    console.log(inputNumb);
     const blackScreenResult = `${screenNumb.innerHTML}${inputNumb}`;
     screenNumb.innerHTML = blackScreenResult;
+    console.log(screenNumb.innerHTML, "sono input numero");
+    return screenNumb;
 }
 
+function operatorClick() {
+    const operator = this.innerHTML;
+    console.log(operator.innerHTML);
+    const dataSave = `${screenNumb.innerHTML} ${operator}`;
+    console.log(dataSave);
+    screenNumb.innerHTML = "";
+    return dataSave;
+
+}
 
 
