@@ -1,7 +1,12 @@
 let numberSelector = document.querySelectorAll(".numbers .shadow");
-numberSelector = addEventListener("click", btnClick)
+console.log(numberSelector);
+
+for (let i = 0; i < numberSelector.length; i++) {
+    let singleNub = numberSelector[i];
+    singleNub.addEventListener("click", btnClick)
+}
 
 function btnClick() {
-    this.style.backgroundColor = "red";
+    
     console.log(this.innerHTML);
 }
