@@ -1,4 +1,4 @@
-# istruizioni
+# istruzioni
 MILESTONE 1
 aggiungere event listener a tutti i numeri (0-9)
     - usare queryselector.all() e aggiungere eventListener
