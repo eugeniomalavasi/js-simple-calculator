@@ -6,7 +6,8 @@ let operatorSelector = document.querySelectorAll(".symbols .shadow")
 let screenNumb = document.querySelector(".screen_text");
 // selezione bottone =
 const equalBtn = document.querySelector(".orange");
-
+// selezione bottone canc
+const cancBtn = document.querySelector(".canc_btn");
 
 // variabile globale per il primo numero
 let firstNumber = 0;
@@ -28,7 +29,8 @@ for (let j = 0; j < operatorSelector.length; j++) {
 }
 
 
-
 // event listener per bottone uguale
 equalBtn.addEventListener ("click", equalClick);
 
+// event listener per canc button
+cancBtn.addEventListener ("click", cancClick);

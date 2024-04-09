@@ -45,6 +45,11 @@ function equalClick() {
         result = (parseInt(firstNumber) / parseInt(secondNumber))
         console.log(result);
     }
+    // output
+    screenNumb.innerHTML = result;
 }
 
 
+function cancClick() {
+    screenNumb.innerHTML = "";
+}

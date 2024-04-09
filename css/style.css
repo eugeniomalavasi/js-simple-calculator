@@ -111,6 +111,7 @@ button {
     box-shadow: 1px 2px 3px gray;
 }
 
-#orange_color {
+.symbols .canc_btn {
     background-color: orange;
+    box-shadow: 1px 2px 3px gray;
 }
