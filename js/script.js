@@ -9,9 +9,9 @@ const equalBtn = document.querySelector(".orange");
 
 
 // variabile globale per il primo numero
-let firstNumber;
+let firstNumber = 0;
 // variabile globale per il secondo numero
-let secondNumber;
+let secondNumber = 0;
 // variabile globale per operatore
 let operatorCalc;
 
