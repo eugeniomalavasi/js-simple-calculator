@@ -1,12 +1,11 @@
 /**
  * concatena numero input con numero nel display nero
- * @returns {number}
+ * @returns {string}
  */
 function btnClick() {
-    firstNumber = this.innerHTML;
-    const blackScreenResult = `${screenNumb.innerHTML}${firstNumber}`;
-    screenNumb.innerHTML = blackScreenResult;
-    return screenNumb;
+    firstInput = this.innerHTML;
+    const firstNumber = `${screenNumb.innerHTML}${firstInput}`;
+    screenNumb.innerHTML = firstNumber;
 }
 
 /**
@@ -38,6 +37,12 @@ function equalClick() {
         console.log(result, typeof result);
     } else if (operatorCalc === "-") {
         result = (parseInt(firstNumber) - parseInt(secondNumber))
+        console.log(result);
+    } else if (operatorCalc === "x") {
+        result = (parseInt(firstNumber) * parseInt(secondNumber))
+        console.log(result);
+    } else if (operatorCalc === "÷") {
+        result = (parseInt(firstNumber) / parseInt(secondNumber))
         console.log(result);
     }
 }
