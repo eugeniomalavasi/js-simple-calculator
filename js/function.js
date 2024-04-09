@@ -31,7 +31,12 @@ function equalClick() {
     console.log(secondNumber);
     // operazioni aritmetriche
     let result = 0;
-    
+    // controllo divisione per 0
+    if (operatorCalc === "÷" && secondNumber === "0") {
+        result = "non si fa"; 
+        screenNumb.innerHTML = result;
+    }
+
     if (operatorCalc === "+") {
         result = (parseInt(firstNumber) + parseInt(secondNumber));
         console.log(result, typeof result);
@@ -41,7 +46,7 @@ function equalClick() {
     } else if (operatorCalc === "x") {
         result = (parseInt(firstNumber) * parseInt(secondNumber))
         console.log(result);
-    } else if (operatorCalc === "÷") {
+    } else if (operatorCalc === "÷" && secondNumber !== "0") {
         result = (parseInt(firstNumber) / parseInt(secondNumber))
         console.log(result);
     }
